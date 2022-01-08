@@ -1,0 +1,42 @@
+{
+  // 使用 IntelliSense 了解相关属性。 
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "debugger cli",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "runtimeVersion": "14.17.0",
+      // Node in ESM mode
+      "program": "${workspaceRoot}/esmrun.mjs",
+      // Node in CJS mode
+      // "program": "${workspaceRoot}/esnrun.cjs",
+      "args": [
+        "test.js",
+        // "--nodemon=-e js,mjs,test",
+        "--nodemon=-w ./test.js",
+      ],
+      "cwd": "${workspaceRoot}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "debugger nodemon",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceRoot}/node_modules/.bin/nodemon",
+      "args": [
+        "test.js",
+        "-w",
+        "test.js"
+      ],
+      "cwd": "${workspaceRoot}"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@wuxh/run",
+  "version": "1.0.0",
+  "description": "nodemon 监听文件，并在文件变动后用 esbuild 处理文件",
+  "bin": {
+    "esmrun": "esmrun.mjs",
+    "esnrun": "esnrun.cjs"
+  },
+  "files": [
+    "esmrun.cjs",
+    "esnrun.mjs",
+    "utils.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxh16144/run.git"
+  },
+  "author": "wxh16144<wxh122@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild-node-loader": "^0.6.3",
+    "esbuild-register": "^3.3.1",
+    "import-meta-resolve": "^1.1.1",
+    "nodemon": "^2.0.15"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
