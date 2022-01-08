@@ -10,7 +10,7 @@ const [input] = getArg();
 const { nodemon: nodemonCLIOption } = getArg();
 
 // _ _ 是必须的，查看 nodemon/lib/cli/index.js 源码
-const nodemonOption = parse(`_ _ ${nodemonCLIOption}`);
+const nodemonOption = parse(`_ _ ${(nodemonCLIOption || '').trim()}`);
 
 async function main() {
   const loaderPath = await resolve('esbuild-node-loader', import.meta.url);
