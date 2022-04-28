@@ -2,10 +2,10 @@
   "name": "@wuxh/run",
   "version": "2.0.0",
   "description": "nodemon 监听文件，并在文件变动后用 esbuild 处理文件",
-  "main": "enrun.cjs",
+  "main": "src/enrun.cjs",
   "bin": {
-    "emrun": "emrun.mjs",
-    "enrun": "enrun.cjs"
+    "emrun": "src/emrun.mjs",
+    "enrun": "src/enrun.cjs"
   },
   "files": [
     "src"
