@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const register = require.resolve('esbuild-register')
 const cli = require('nodemon/lib/cli/index');
 const run = require('nodemon');

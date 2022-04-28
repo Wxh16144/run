@@ -15,7 +15,7 @@ const nodemonOption = parse(`_ _ ${(nodemonCLIOption || '').trim()}`);
 async function main() {
   const loaderPath = await resolve('esbuild-node-loader', import.meta.url);
   existsSync(input) && (nodemonOption.script = input);
-  nodemonOption.exec = `node --experimental-loader ${loaderPath} ${filterArg('nodemon')}`;
+  nodemonOption.exec = `node --experimental-loader ${loaderPath} --no-warnings ${filterArg('nodemon')}`;
 
   run(nodemonOption)
 }

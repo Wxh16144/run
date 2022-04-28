@@ -7,9 +7,7 @@
     "esnrun": "esnrun.cjs"
   },
   "files": [
-    "esmrun.cjs",
-    "esnrun.mjs",
-    "utils.js"
+    "src"
   ],
   "repository": {
     "type": "git",

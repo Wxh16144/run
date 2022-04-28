@@ -13,13 +13,13 @@
       ],
       "runtimeVersion": "14.17.0",
       // Node in ESM mode
-      "program": "${workspaceRoot}/esmrun.mjs",
+      "program": "${workspaceRoot}/src/esmrun.mjs",
       // Node in CJS mode
-      // "program": "${workspaceRoot}/esnrun.cjs",
+      // "program": "${workspaceRoot}/src/esnrun.cjs",
       "args": [
         "test.js",
         // "--nodemon=-e js,mjs,test",
-        "--nodemon=-w ./test.js",
+        // "--nodemon=-w ./test.js",
       ],
       "cwd": "${workspaceRoot}"
     },
