@@ -5,11 +5,13 @@
 ## 使用
 
 ```bash
-# 处理 CJS 模块
-npx -p @wuxh/run esnrun index.ts
+# 处理 CJS 模块 v2.0.0 +
+npx @wuxh/run index.ts
+
+# 1.0.1 使用 npx -p @wuxh/run emrun index.ts
 
 # 处理 ESM 模块
-npx -p @wuxh/run esmrun index.ts
+npx -p @wuxh/run emrun index.ts
 ```
 
 ### 全局安装
@@ -17,12 +19,12 @@ npx -p @wuxh/run esmrun index.ts
 ```bash
 npm i @wuxh/run -g
 
-# esnrun index.ts  # CJS
-# esmrun index.ts  # ESM
+# enrun index.ts  # CJS
+# emrun index.ts  # ESM
 ```
 
-+ **esnrun**: Node in CJS mode - by [esbuild-register](https://github.com/egoist/esbuild-register)
-+ **esmrun**: Node in ESM mode - by [esbuild-node-loader](https://github.com/antfu/esbuild-node-loader)
++ **enrun**: Node in CJS mode - by [esbuild-register](https://github.com/egoist/esbuild-register)
++ **emrun**: Node in ESM mode - by [esbuild-node-loader](https://github.com/antfu/esbuild-node-loader)
 
 ### 本地安装
 
@@ -35,21 +37,22 @@ npm i @wuxh/run -D
 ```json
 {
   "scripts": {
-    "start": "esnrun index.ts",
+    "start": "enrun index.ts",
   },
   "devDependencies": {
     "@wuxh/run": "*"
   }
 }
 ```
+
 **ESM**
 
 ```diff
 {
 + "type": "module", 
   "scripts": {
--   "start": "esnrun index.ts",
-+   "start": "esmrun index.ts",
+-   "start": "enrun index.ts",
++   "start": "emrun index.ts",
   }
 }
 ```
@@ -63,5 +66,11 @@ npm start
 [查看 nodemon 规则](https://github.com/remy/nodemon/blob/main/doc/cli/config.txt#L2-L11)
 
 ```bash
-npx -p @wuxh/run esnrun index.ts --nodemon='-w ./index.ts'
+npx -p @wuxh/run enrun index.ts --nodemon='-w ./index.ts'
 ```
+
+## Warn
+
+1. 自 `v2.0.0` 开始:
+   1. `esnrun` 重命名为 `enrun`
+   2. `esmrun` 重命名为 `emrun`
