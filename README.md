@@ -1,6 +1,9 @@
-# @wuxh/run
+# ~~@wuxh/run~~
 
 [nodemon](https://nodemon.io/) 监听并使用 [esbuild](https://esbuild.github.io/) 作为 `node runtime`, 支持 `TypeScript`、`ESNext`.
+
+> [!WARNING]
+> **已经弃用！** 请使用 [tsx](https://github.com/privatenumber/tsx/) 代替此工具 :>
 
 ## 使用
 
